@@ -1,6 +1,6 @@
 terraform {
   cloud {
-    organization "alhigaz2019gmail2"
+    organization = "alhigaz2019gmail2"
   
     workspaces {
       name = "azure-infra"
@@ -8,7 +8,7 @@ terraform {
   }
 }
 
-provider "azurem"
+provider "azurem" {
   featurs {}
 
   subscription_id = var.subscriptionID
