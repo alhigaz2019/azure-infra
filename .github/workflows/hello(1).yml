@@ -1,0 +1,36 @@
+# name of the pipeline/workflow
+name: "hello world"
+
+# condition to when to trigger the workflow
+on:
+  push: 
+    branches: [ master ]
+  pull_request:
+  workflow_dispatch:
+  
+jobs:
+  validate:
+    name: "hello"
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: print hello world
+        run: echo "hello world"
+  
+  dev-plan:
+    needs: validate
+    name: "devops"
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: print welcome
+        run: echo "welcome"
+        
+  test-plan:
+    needs: validate
+    name: "test-plan"
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: print welcome
+        run: echo "welcome"
