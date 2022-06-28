@@ -1,6 +1,6 @@
 terraform {
   cloud {
-    organization = "alhigaz2019"
+    organization = "alhigaz2022"
   
     workspaces {
       name = "azure-infra"
