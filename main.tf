@@ -1,13 +1,4 @@
 terraform {
-  cloud {
-    organization = "alhigaz2022"
-  
-    workspaces {
-      name = "azure-infra"
-    }
-  }
-}
-
 required_providers {
     azurerm = {
       source = "hashicorp/azurerm"
