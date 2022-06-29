@@ -1,18 +1,11 @@
 terraform {
-   cloud {
-      organization :"alhigaz2022"
-      workspaces {
-      name = "azure-infra"
+  required_providers {
+    azurerm = {
+      source = "hashicorp/azurerm"
+      version = "3.11.0"
     }
   }
 }
-
-required_providers {
-   azurerm = {
-     source = "hashicorp/azurerm"
-     version = "~>3.0"
-   }
- }
 
 provider "azurem" {
   featurs {}
