@@ -20,8 +20,8 @@ resource "azurerm_resource_group" "example" {
   name     = "example"
   location = "East US 2"
 }
-resource "azurerm_resource_group" "devops" {
-  name     = "devops"
+resource "azurerm_resource_group" "demo" {
+  name     = "demo"
   location = "East US 2"
 }
 
