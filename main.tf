@@ -1,42 +1,23 @@
 terraform {
-  cloud {
-    organization = "alhigaz2019"
-    workspaces {
-      name = "azure-infra"
+  required_providers {
+    azurem = {
+      source = "hashicop/azurem"
+      version = "3.10.0"
     }
+  }
+  backend "azurerm" {
+    resource_group_name  = "tf-state"
+    storage_account_name = "alhigaz2019gmail2tfstate"
+    container_name       = "tf-state"
+    key                  = "terraform.tfstate"
   }
 }
 
 provider "azurem" {
   featurs {}
 
-  subscription_id = var.subscriptionID
-  client_id       = var.clientID
-  client_secret   = var.clientSecret
-  tenant_id       = var.tenantID
-}
-
-resource "azurerm_resource_group" "example" {
-  name     = "example"
-  location = "East US 2"
-}
+ 
 resource "azurerm_resource_group" "demo" {
   name     = "demo"
   location = "East US 2"
 }
-
-variable "subscriptionID" {
-  type = string
-}
-
- variable "clientID" {
-  type = string
-}
-
- variable "clientSecret" {
-  type = string
- }
-
- variable "tenantID" {
-  type = string
- }
