@@ -1,8 +1,9 @@
 terraform {
+  required_version = ">= 1.0.0"
   required_providers {
     azurem = {
       source = "hashicop/azurem"
-      version = "3.10.0"
+      version = ">= 3.0"
     }
   }
   backend "azurerm" {
