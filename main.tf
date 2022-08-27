@@ -7,7 +7,7 @@ terraform {
     }
   }
   backend "azurerm" {
-    resource_group_name  = "tf-state"
+    resource_group_name  = "state-tf"
     storage_account_name = "alhigaz2019gmail2tfstate"
     container_name       = "tf-state"
     key                  = "terraform.tfstate"
