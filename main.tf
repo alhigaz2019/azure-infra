@@ -1,15 +1,14 @@
 terraform {
-  required_version = ">= 1.0.0"
   required_providers {
     azurem = {
       source = "hashicop/azurem"
-      version = ">= 3.0"
+      version = "3.10.0"
     }
   }
   backend "azurerm" {
-    resource_group_name  = "state-tf"
+    resource_group_name  = "tf-state"
     storage_account_name = "alhigaz2019gmail2tfstate"
-    container_name       = "tf-state"
+    container_name       = "state-tf"
     key                  = "terraform.tfstate"
   }
 }
