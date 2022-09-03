@@ -1,10 +1,16 @@
 terraform {
   required_providers {
-    azurem = {
-      source = "hashicop/azurem"
-      version = "3.20.0"
+    azurerm = {
+      source = "hashicorp/azurerm"
+      version = "3.21.1"
     }
   }
+}
+
+provider "azurem" {
+  featurs {}
+
+  
   backend "azurerm" {
     resource_group_name  = "tf-state"
     storage_account_name = "alhigaz2019gmail2tfstate"
@@ -13,10 +19,6 @@ terraform {
   }
 }
 
-provider "azurem" {
-  featurs {}
-
-} 
 resource "azurerm_resource_group" "demo" {
   name     = "demo"
   location = "East US 2"
