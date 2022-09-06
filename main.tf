@@ -7,7 +7,7 @@ terraform {
   }
 }
 
-provider "azurem" {
+provider "azurerm" {
   featurs {}
 
   
