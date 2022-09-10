@@ -7,8 +7,8 @@ terraform {
   }
 }
 
-provider "azurem" {
-  featurs {}
+provider "azurerm" {
+  features {}
 
   
   backend "azurerm" {
