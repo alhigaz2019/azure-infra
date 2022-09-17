@@ -11,12 +11,3 @@ provider "azurerm" {
   features {}
 }
 
-terraform {
-  cloud {
-    organization = "alhigaz2022"
-
-    workspaces {
-      name = "azure-infra-tf-01"
-    }
-  }
-}
